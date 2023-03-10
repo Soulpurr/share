@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Container/Home";
+
+import Contact from "./Components/Contact";
+import Login from "./Components/Login";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //  <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_CLIENT_ID}>
+    <GoogleOAuthProvider clientId="58287943540-bv0g7a77jgpn6lnpk4fue0oh4kaag7cq.apps.googleusercontent.com">
+      <Routes>
+        <Route path="/*" element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+    </GoogleOAuthProvider>
   );
 }
 
