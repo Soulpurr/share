@@ -25,7 +25,7 @@ const Pin = ({ pin }) => {
       });
   };
 console.log(urlFor(image))
-  let alreadySaved = pin?.save?.filter((item) => item?.postedBy?._id === user?.googleId);
+  let alreadySaved = pin?.save?.filter((item) => item?.postedBy?._id === user?._id);
 
   alreadySaved = alreadySaved?.length > 0 ? alreadySaved : [];
 
@@ -110,7 +110,7 @@ console.log(urlFor(image))
                 </a>
               ) : undefined}
               {
-           postedBy?._id === user?.googleId && (
+           postedBy?._id === user?._id && (
            <button
              type="button"
              onClick={(e) => {
