@@ -1,3 +1,8 @@
+Deployment Link: https://share-omega.vercel.app/
+ A social media app where you can post
+ Backend is handled on sanity.io
+ 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
