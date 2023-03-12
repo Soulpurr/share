@@ -24,7 +24,7 @@ const Pin = ({ pin }) => {
         window.location.reload();
       });
   };
-console.log(urlFor(image))
+
   let alreadySaved = pin?.save?.filter((item) => item?.postedBy?._id === user?._id);
 
   alreadySaved = alreadySaved?.length > 0 ? alreadySaved : [];
